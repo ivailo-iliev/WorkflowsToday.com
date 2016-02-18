@@ -5,19 +5,80 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="en-us" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="styles/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
 		<link rel="stylesheet" type="text/css" href="styles/animate.css"/>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/jquery.visible.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/actions.js"></script>
 	</head>
 	<body>
+		<!-- Request a demo popup -->
+    <div id="demoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Interested in a demo?</h4>
+          </div>
+          <div class="modal-body">
+          		<div class="demoForm col-md-12 col-sm-12 col-xs-12">
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Name</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Job title</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Company</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2" ></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Businsess Email</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Phone</label>
+						<div class="com-md-8 col-sm-8 col-xs-12"><input type="password" class="form-control" id="exampleInputPassword1" ></div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Country</label>
+						<div class="com-md-8 col-sm-8 col-xs-12">
+							<select class="form-control">
+								<option>United Stated</option>
+								<option></option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group col-md-12 col-sm-12 col-xs-12">
+						<label class="com-md-4 col-sm-4 col-xs-12">Prefered time</label>
+						<div class="com-md-8 col-sm-8 col-xs-12">
+							<select class="form-control">
+								<option>Afternoon</option>
+								<option></option>
+							</select>
+						</div>
+					</div>
+		  		</div>
+		  		<div class="clear"></div>
+          </div>
+          <div class="modal-footer">
+          		<button type="button" class="btn btn-default" data-dismiss="modal">Send</button>
+          		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end // Request a demo popup -->
+    
 		<div id="myModal" class="modal fade" role="dialog">
 		  <div class="modal-dialog">
 			<div class="modal-content">
@@ -138,7 +199,7 @@
                                     </div>
                                     -->
                                     <div class="buttonHolderHeader">
-                                        <div class="buttonBlue"><a href="#">Request Demo</a></div>
+                                        <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -198,94 +259,86 @@
 		<div  class="products"  id="aboutUsIconsWrap">
 			<div class="container">
 				<h2 class="blue"><div class="textPosition">DocuQuest: Document Control Management Software</div></h2>
-				<h3 class="blue"><div class="textPosition">Reduces the Document Management effort by 80%</div></h3>
+				<h3 class="blue subtitle"><div class="textPosition">Reduces the Document Management effort by 80%</div></h3>
 					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/document-creation-and-personalized-documents.png"/></a>
-									<h4 class="blue textPosition">Simplified <strong>Document Creation</strong> process. Personalized <strong>Document Profiles</strong></h4>
-								</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/document-creation-and-personalized-documents.png"/></a>
+								<h4 class="blue textPosition">Simplified <strong>Document Creation</strong> process. Personalized <strong>Document Profiles</strong></h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/feedback-and-approval.png"/></a>
-									<h4 class="blue textPosition">Capability to capture all relevant <strong>Feedback</strong> prior to submission for Approval</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/feedback-and-approval.png"/></a>
+								<h4 class="blue textPosition">Capability to capture all relevant <strong>Feedback</strong> prior to submission for Approval</h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/history-log-and-approval.png"/></a>
-									<h4 class="blue textPosition">Configurable <strong>Approval workflows</strong> with comprehensive history logs</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/history-log-and-approval.png"/></a>
+								<h4 class="blue textPosition">Configurable <strong>Approval workflows</strong> with comprehensive history logs</h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/advanced-search-and-filters.png"/></a>
-									<h4 class="blue textPosition">Quick or <strong>Advanced Search</strong>, FrontPage, various filters and <strong>Dashboard</strong> views facilitate 
-									the end user navigation</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/advanced-search-and-filters.png"/></a>
+								<h4 class="blue textPosition">Quick or <strong>Advanced Search</strong>, FrontPage, various filters and <strong>Dashboard</strong> views facilitate 
+								the end user navigation</h4>
 							</div>
-					    </div>
-						<div class="row"> 
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/printing-settings.png"/></a>
-									<h4 class="blue textPosition">Configurable Header and Footer settings for <strong>Document Printing</strong></h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/printing-settings.png"/></a>
+								<h4 class="blue textPosition">Configurable Header and Footer settings for <strong>Document Printing</strong></h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/periodic-reviews-site-wise.png"/></a>
-									<h4 class="blue textPosition">Automated <strong>Periodic Reviews</strong> can be predefined per Document, Document Profile or site wise</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/periodic-reviews-site-wise.png"/></a>
+								<h4 class="blue textPosition">Automated <strong>Periodic Reviews</strong> can be predefined per Document, Document Profile or site wise</h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/feedback-and-approval.png"/></a>
-									<h4 class="blue textPosition"><strong>Change Requests</strong> to ensure that documents are current and consistent</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/feedback-and-approval.png"/></a>
+								<h4 class="blue textPosition"><strong>Change Requests</strong> to ensure that documents are current and consistent</h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/email-document-life-cycle.png"/></a>
-									<h4 class="blue textPosition"><strong>Email notifications</strong> and <strong>Reminder mails</strong> sent to all concerned users on each stage of the Document Life Cycle </h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/email-document-life-cycle.png"/></a>
+								<h4 class="blue textPosition"><strong>Email notifications</strong> and <strong>Reminder mails</strong> sent to all concerned users on each stage of the Document Life Cycle </h4>
 							</div>
-					    </div>
-						<div class="row"> 
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/document-revision-updates.png"/></a>
-									<h4 class="blue textPosition">Integration to <strong>Microsoft Office</strong> and <strong>Document Revision</strong> with one click </h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/document-revision-updates.png"/></a>
+								<h4 class="blue textPosition">Integration to <strong>Microsoft Office</strong> and <strong>Document Revision</strong> with one click </h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/tracebility-document-libraries.png"/></a>
-									<h4 class="blue textPosition"><strong>Full traceability</strong> of changes made on all versions of the document – Draft, Issued and Archived Document Libraries</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/tracebility-document-libraries.png"/></a>
+								<h4 class="blue textPosition"><strong>Full traceability</strong> of changes made on all versions of the document – Draft, Issued and Archived Document Libraries</h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/private-documents-security.png"/></a>
-									<h4 class="blue textPosition"><strong>Private documents</strong> – improved security for managing restricted readership</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/private-documents-security.png"/></a>
+								<h4 class="blue textPosition"><strong>Private documents</strong> – improved security for managing restricted readership</h4>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/retention-disposition.png"/></a>
-									<h4 class="blue textPosition">Automated features for <strong>Document Retention</strong> and <strong>Disposition</strong> </h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/retention-disposition.png"/></a>
+								<h4 class="blue textPosition">Automated features for <strong>Document Retention</strong> and <strong>Disposition</strong> </h4>
 							</div>
-                            <!--
-							<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer" data-animation="bounceInUp">
-								<div class="aboutUsIconHolder">
-									<a href="#"><img src="images/retention-disposition.png"/></a>
-									<h4 class="blue textPosition">Collaborations with Customers, Suppliers and other trading partners</h4>
-								</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 animatedContainer productInfo" data-animation="bounceInUp">
+							<div class="aboutUsIconHolder">
+								<a href="#"><img src="images/retention-disposition.png"/></a>
+								<h4 class="blue textPosition">Collaborations with Customers, Suppliers and other trading partners</h4>
 							</div>
-                            -->
 						</div>
 					</div>
 
@@ -375,7 +428,7 @@
 
 				<div class="buttonScheduleDemoHolder">
                     <h3 class="blue"><div class="textPosition">We can show you all above features and functionalities and many more:</div></h3>
-					<button type="button" class="buttonScheduleDemo">Schedule Demo</button>
+					<button type="button" class="buttonScheduleDemo" data-toggle="modal" data-target="#demoModal">Schedule Demo</button>
 				</div>
 			</div>
 		</div>

@@ -20,6 +20,13 @@ body{
 .blue.description{
 	font-weight: 700;
 }
+#videoModal .modal-dialog {
+    width: 80%; 
+	margin: auto;
+}
+#demoModal .modal-body {
+    overflow: hidden;
+}
 h1{
 	margin: 5px;
 	margin-left: -5px;
@@ -410,6 +417,10 @@ p{
 .textPosition{
 	text-align: center;
 }
+.products .textPosition{
+	margin-top: 5px;
+}
+
 #aboutUsIconsOrangeWrap{
 	width: 100%;
 	overflow: hidden;
@@ -497,6 +508,9 @@ p{
 }
 .contactForm{
 	padding: 10px 0 10px 0;
+}
+.demoForm{
+	overflow: hidden;
 }
 .contactLabels{
 	font-family: 'Open sans', sans-serif;
@@ -602,7 +616,14 @@ p{
 }
 
 /* Products */
-
+.productInfo{
+	height: 330px;
+	overflow: hidden;
+}
+.subtitle{
+	line-height: 0px;
+	margin-bottom: 25px;
+}
 .backgroundBlueBorder{
 	width: 100%;
 	overflow: hidden;
@@ -638,7 +659,7 @@ p{
 	text-align: center;
 }
 .products .articleTextBlue{
-	height: 50px;
+	height: 100px;
 	overflow: hidden;
 }
 /* Contact */
